@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  database:
+    image: postgres
+    container_name: go-rss-agg
+    ports:
+      - "5433:5432"
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: gorssagg
